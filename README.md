@@ -1,5 +1,3 @@
-This repo create for purpose take note for pjsip configuation with sipml5
-
 ###Before we begin
 --------
 Update system
@@ -127,3 +125,6 @@ To access Asterisk CLI
 ```
 sudo asterisk -rvvvvvvv
 ``` 
+=======
+This repo create for purpose take note for pjsip configuation with sipml5
+>>>>>>> 1e53c928b623a830f7d617956da1c1770237f75e
