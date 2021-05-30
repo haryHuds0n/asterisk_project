@@ -164,8 +164,7 @@ sudo asterisk -rvvvvvvv
 
 ### Configure Asterisk for WebRTC Clients
 
-To configure Asterisk for WebRTC Clients we need to create a certificates
-To create Certificates we need to change to directory that we install Asterisk before and run following command.
+To configure Asterisk for WebRTC Clients we need to create a certificates, we need to change to directory that we install Asterisk before and run following command.
 
 ```bash
 sudo contrib/scripts/ast_tls_cert -C <IP-Address-of-Asterisk-Server> -O "My Organization" -b 2048 -d /etc/asterisk/keys
@@ -204,26 +203,25 @@ Configure `/etc/asterisk/pjsip.conf`
 type=transport
 protocol=wss
 bind=0.0.0.0
-; All other transport parameters are ignored for wss transports.
 ```
 ##### PJSIP Endpoint, AOR and Auth
 
 ```bash
-[webrtc_client]
+[User1]
 type=aor
 max_contacts=5
 remove_existing=yes
 
-[webrtc_client]
+[User1]
 type=auth
 auth_type=userpass
-username=webrtc_client
-password=webrtc_client 
+username=User1
+password=User1 
 
-[webrtc_client]
+[User1]
 type=endpoint
-aors=webrtc_client
-auth=webrtc_client
+aors=User1
+auth=User1
 dtls_auto_generate_cert=yes
 webrtc=yes
 ; Setting webrtc=yes is a shortcut for setting the following options:
@@ -263,6 +261,6 @@ Next, we click on expert mode and configure as following
 
 Last but not least, before click on Login button we need to navigate to `https://<IP-Asterisk-Server>:8089/ws` and accept certificates,
 after accept you will see something like this
-![image](images/ws.png)
+![image](images/wss.png)
 
 Finally we can click login and if success you will see `connected` appearance on page
