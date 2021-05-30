@@ -162,3 +162,89 @@ To access Asterisk CLI
 sudo asterisk -rvvvvvvv
 ``` 
 
+### Configure Asterisk for WebRTC Clients
+
+To configure Asterisk for WebRTC Clients we need to create a certificates
+To create Certificates we need to change to directory that we install Asterisk before and run following command.
+
+```bash
+sudo contrib/scripts/ast_tls_cert -C <IP-Address-of-Asterisk-Server> -O "My Organization" -b 2048 -d /etc/asterisk/keys
+```
+We need to change IP-Address-of-Asterisk-Server match with Asterisk Server
+After run the script you will need to type password for several time. Remember this password for later use
+We'll use the asterisk.crt and asterisk.key files later to configure the HTTP server.
+
+### Asterisk Configuration
+#### Configure Asterisk's built-in HTTP server
+
+Configure `/etc/asterisk/http.conf`
+```bash
+[general]
+enabled=yes
+bindaddr=0.0.0.0
+bindport=8088
+tlsenable=yes
+tlsbindaddr=0.0.0.0:8089
+tlscertfile=/etc/asterisk/keys/asterisk.crt
+tlsprivatekey=/etc/asterisk/keys/asterisk.key
+```
+
+Restart Asterisk and make sure TLS server is running by issuing the following CLI command.
+```
+http show status
+```
+#### Configure PJSIP
+##### PJSIP WSS Transport
+Configure `/etc/asterisk/pjsip.conf`
+```bash
+[transport-wss]
+type=transport
+protocol=wss
+bind=0.0.0.0
+; All other transport parameters are ignored for wss transports.
+```
+##### PJSIP Endpoint, AOR and Auth
+```bash
+[webrtc_client]
+type=aor
+max_contacts=5
+remove_existing=yes
+
+[webrtc_client]
+type=auth
+auth_type=userpass
+username=webrtc_client
+password=webrtc_client 
+
+[webrtc_client]
+type=endpoint
+aors=webrtc_client
+auth=webrtc_client
+dtls_auto_generate_cert=yes
+webrtc=yes
+; Setting webrtc=yes is a shortcut for setting the following options:
+; use_avpf=yes
+; media_encryption=dtls
+; dtls_verify=fingerprint
+; dtls_setup=actpass
+; ice_support=yes
+; media_use_received_transport=yes
+; rtcp_mux=yes
+context=default
+disallow=all
+allow=opus,ulaw
+```
+
+### WEBRTC USING SIPML5
+#### Configure Asterisk Dialplan
+Configure `/etc/asterisk/extensions.conf`
+```bash
+[default]
+
+exten=>6001,1,Dial(PJSIP/webrtc_client_1,20)
+exten=>6002,1,Dial(PJSIP/webrtc_client_2,20)
+```
+
+### Configure SIPML5
+
+Visit [SIPML5](https://www.doubango.org/sipml5/) site to configure SIPML5 Client
