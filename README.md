@@ -178,6 +178,7 @@ We'll use the asterisk.crt and asterisk.key files later to configure the HTTP se
 #### Configure Asterisk's built-in HTTP server
 
 Configure `/etc/asterisk/http.conf`
+
 ```bash
 [general]
 enabled=yes
@@ -195,7 +196,9 @@ http show status
 ```
 #### Configure PJSIP
 ##### PJSIP WSS Transport
+
 Configure `/etc/asterisk/pjsip.conf`
+
 ```bash
 [transport-wss]
 type=transport
@@ -204,6 +207,7 @@ bind=0.0.0.0
 ; All other transport parameters are ignored for wss transports.
 ```
 ##### PJSIP Endpoint, AOR and Auth
+
 ```bash
 [webrtc_client]
 type=aor
@@ -237,7 +241,9 @@ allow=opus,ulaw
 
 ### WEBRTC USING SIPML5
 #### Configure Asterisk Dialplan
+
 Configure `/etc/asterisk/extensions.conf`
+
 ```bash
 [default]
 
@@ -248,3 +254,15 @@ exten=>6002,1,Dial(PJSIP/webrtc_client_2,20)
 ### Configure SIPML5
 
 Visit [SIPML5](https://www.doubango.org/sipml5/) site to configure SIPML5 Client
+Click the "Enjoy our live demo" link to be directed to the sipml5 client.
+Configure Registration box as following
+![image](images/registration_box.png) 
+
+Next, we click on expert mode and configure as following
+![image](images/expert_settings.png)
+
+Last but not least, before click on Login button we need to navigate to `https://<IP-Asterisk-Server>:8089/ws` and accept certificates,
+after accept you will see something like this
+![image](images/ws.png)
+
+Finally we can click login and if success you will see `connected` appearance on page
