@@ -254,13 +254,16 @@ exten=>6002,1,Dial(PJSIP/webrtc_client_2,20)
 Visit [SIPML5](https://www.doubango.org/sipml5/) site to configure SIPML5 Client
 Click the "Enjoy our live demo" link to be directed to the sipml5 client.
 Configure Registration box as following
+
 ![image](images/registration_box.png) 
 
 Next, we click on expert mode and configure as following
+
 ![image](images/expert_settings.png)
 
 Last but not least, before click on Login button we need to navigate to `https://<IP-Asterisk-Server>:8089/ws` and accept certificates,
 after accept you will see something like this
+
 ![image](images/wss.png)
 
 Finally we can click login and if success you will see `connected` appearance on page
