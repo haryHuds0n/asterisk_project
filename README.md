@@ -267,3 +267,30 @@ after accept you will see something like this
 ![image](images/wss.png)
 
 Finally we can click login and if success you will see `connected` appearance on page
+We can configure `extensions.conf` as following to create a simplpe dialplan
+```bash
+[default]
+
+exten=>6001,1,Dial(PJSIP/webrtc_client_1,20)
+exten=>6002,1,Dial(PJSIP/webrtc_client_2,20)
+```
+### Make a test call
+
+In the SIPML5 control box input 6002. Then press Call button. You'll see a drop-down
+
+![image](iamges/call-popup.png)
+
+Select "Audio" to continue.  Once you do this, Firefox will display a popup asking permission to use your microphone:
+
+![image](iamges/allow-micro.png)
+
+Click "Allow."
+Next, the Call control box will indicate that the call is proceeding:
+
+![image](iamges/in_progess.png)
+
+Finally, when the call is connected, you will see In Call:
+
+![image](iamges/in_call.png)
+
+You've just made your first call via WebRTC using Asterisk!
