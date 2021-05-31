@@ -256,8 +256,8 @@ Truy cập [SIPML5](https://www.doubango.org/sipml5/) để cấu hình SIPML5 C
 Click vào "Enjoy our live demo" và cấu hình như sau 
 
 ![image](images/registration_box.png) 
-Thay thế địa chỉ IP bằng địa chỉ IP của Asterisk Server
 
+Thay thế địa chỉ IP bằng địa chỉ IP của Asterisk Server
 Tiếp theo, click `expert mode` và cấu hình như sau
 
 ![image](images/expert_settings.png)
