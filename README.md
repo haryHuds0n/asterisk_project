@@ -278,19 +278,19 @@ exten=>6002,1,Dial(PJSIP/webrtc_client_2,20)
 
 In the SIPML5 control box input 6002. Then press Call button. You'll see a drop-down
 
-![image](iamges/call-popup.png)
+![image](images/call-popup.png)
 
 Select "Audio" to continue.  Once you do this, Firefox will display a popup asking permission to use your microphone:
 
-![image](iamges/allow-micro.png)
+![image](images/allow-micro.png)
 
 Click "Allow."
 Next, the Call control box will indicate that the call is proceeding:
 
-![image](iamges/in_progess.png)
+![image](images/in_progess.png)
 
 Finally, when the call is connected, you will see In Call:
 
-![image](iamges/in_call.png)
+![image](images/in_call.png)
 
 You've just made your first call via WebRTC using Asterisk!
