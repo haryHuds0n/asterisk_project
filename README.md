@@ -282,12 +282,12 @@ In the SIPML5 control box input 6002. Then press Call button. You'll see a drop-
 
 Select "Audio" to continue.  Once you do this, Firefox will display a popup asking permission to use your microphone:
 
-![image](images/allow-micro.png)
+![image](images/allow_micro.png)
 
 Click "Allow."
 Next, the Call control box will indicate that the call is proceeding:
 
-![image](images/in_progess.png)
+![image](images/in_progress.png)
 
 Finally, when the call is connected, you will see In Call:
 
