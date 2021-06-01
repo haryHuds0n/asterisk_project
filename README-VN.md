@@ -232,9 +232,9 @@ Click vào "Enjoy our live demo" và cấu hình như sau
 
 ![image](images/registration_box.png)
 
-`Displayname:` Là tên hiển thị khi thực hiện cuộc gọi
-`Private Identify:` Đây là tên đã được set trong `pjsip.conf`
-`Public Identify:` Nhập theo format `sip:<Private Identify>@<IP-Address-Asterisk-Server`
+`Displayname:` Là tên hiển thị khi thực hiện cuộc gọi\
+`Private Identify:` Đây là tên đã được set trong `pjsip.conf`\
+`Public Identify:` Nhập theo format `sip:<Private Identify>@<IP-Address-Asterisk-Server`\
 
 Tiếp theo, click `expert mode` và cấu hình như sau
 
