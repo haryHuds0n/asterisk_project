@@ -109,7 +109,7 @@ Sau khi quá trình `confiure` hoàn thành ta có thể chọn thêm các featu
 make menuselect
 ```
 
-Lúc này ta phải bảo đảm bảo rằng hai  này đã được chọn trong `resource modules`
+Lúc này ta phải bảo đảm bảo rằng hai mục này đã được chọn trong `resource modules`
 
 ```bash
 res_srtp
