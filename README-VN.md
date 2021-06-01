@@ -188,7 +188,7 @@ Khởi động lại và kiểm tra TLS server đã chạy với Asteisk CLI com
 http show status
 ```
 ###### CẤU HÌNH PJSIP
-####### PJSIP WSS Transport
+###### PJSIP WSS Transport
 
 Cấu hình `/etc/asterisk/pjsip.conf`
 
@@ -198,7 +198,7 @@ type=transport
 protocol=wss
 bind=0.0.0.0
 ```
-####### PJSIP Endpoint, AOR và Auth
+###### PJSIP Endpoint, AOR và Auth
 
 ```bash
 [User1]
@@ -224,16 +224,6 @@ allow=opus,ulaw
 ```
 
 ##### WEBRTC SỬ DỤNG SIPML5
-###### Cấu hình Asterisk Dialplan
-
-Cấu hình `/etc/asterisk/extensions.conf`
-
-```bash
-[default]
-
-exten=>6001,1,Dial(PJSIP/webrtc_client_1,20)
-exten=>6002,1,Dial(PJSIP/webrtc_client_2,20)
-```
 
 ##### Cấu hình SIPML5
 
@@ -242,9 +232,10 @@ Click vào "Enjoy our live demo" và cấu hình như sau
 
 ![image](images/registration_box.png)
 
-Displayname: Là tên hiển thị khi thực hiện cuộc gọi
-Private Identify: Đây là tên đã được set trong `pjsip.conf`
-Public Identify: Nhập theo format `sip:<Private Identify>@<IP-Address-Asterisk-Server`
+`Displayname:` Là tên hiển thị khi thực hiện cuộc gọi
+`Private Identify:` Đây là tên đã được set trong `pjsip.conf`
+`Public Identify:` Nhập theo format `sip:<Private Identify>@<IP-Address-Asterisk-Server`
+
 Tiếp theo, click `expert mode` và cấu hình như sau
 
 ![image](images/expert_settings.png)
