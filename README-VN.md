@@ -234,7 +234,7 @@ Click vào "Enjoy our live demo" và cấu hình như sau
 
 `Displayname:` Là tên hiển thị khi thực hiện cuộc gọi\
 `Private Identify:` Đây là tên đã được set trong `pjsip.conf`\
-`Public Identify:` Nhập theo format `sip:<Private Identify>@<IP-Address-Asterisk-Server`\
+`Public Identify:` Nhập theo format `sip:<Private Identify>@<IP-Address-Asterisk-Server`
 
 Tiếp theo, click `expert mode` và cấu hình như sau
 
@@ -255,9 +255,9 @@ là đã login thành công
 exten=>6001,1,Dial(PJSIP/User1,20)
 exten=>6002,1,Dial(PJSIP/User2,20)
 ```
-6001, 6002: Là ext để nhập vào thực hiện cuộc gọi
-PJSIP: Thư viện được sử dụng
-User1, User2: Là hai User đã được set trong `pjsip.conf`
+`6001, 6002:` Là ext để nhập vào thực hiện cuộc gọi\
+`PJSIP:` Thư viện được sử dụng\
+`User1, User2:` Là hai User đã được set trong `pjsip.conf`
 ##### THỰC HIỆN CUỘC GỌI
 Để thực hiện được cuộc gọi ta login thêm một User tương tự ở một trình duyệt web khác
 Trong box Call Control của `User1` ta nhập 6002 sau đó nhấn nút `Call`
