@@ -228,7 +228,7 @@ allow=opus,ulaw
 ##### Cấu hình SIPML5
 
 Truy cập [SIPML5](https://www.doubango.org/sipml5/) để cấu hình SIPML5 Client
-Click vào "Enjoy our live demo" và cấu hình như sau 
+Click vào "Enjoy our live demo" để cấu hình 
 
 ![image](images/registration_box.png)
 
@@ -247,7 +247,7 @@ Cuối cùng, để có thể login được ta phải truy cập vào  `https:/
 Sau khi hoàn thành bước trên ta có thể click `Login`, nếu xuất hiện `connected`
 là đã login thành công
 
-Để có thể thực hiện một cuộc gọi đơn giản ta cấu hình `extensions.conf` như sau
+Để có thể thực hiện một cuộc gọi đơn giản ta cấu hình `extensions.conf`
 
 ```bash
 [default]
