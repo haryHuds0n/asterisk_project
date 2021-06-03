@@ -109,7 +109,9 @@ Sau khi quá trình `confiure` hoàn thành ta có thể chọn thêm các featu
 make menuselect
 ```
 
-Lúc này ta phải bảo đảm bảo rằng hai  này đã được chọn trong `resource modules`
+
+Lúc này ta phải bảo đảm bảo rằng hai mục này đã được chọn trong `resource modules`
+
 
 ```bash
 res_srtp
@@ -188,7 +190,7 @@ Khởi động lại và kiểm tra TLS server đã chạy với Asteisk CLI com
 http show status
 ```
 ###### CẤU HÌNH PJSIP
-####### PJSIP WSS Transport
+###### PJSIP WSS Transport
 
 Cấu hình `/etc/asterisk/pjsip.conf`
 
@@ -198,7 +200,11 @@ type=transport
 protocol=wss
 bind=0.0.0.0
 ```
-####### PJSIP Endpoint, AOR và Auth
+<<<<<<< HEAD
+###### PJSIP Endpoint, AOR và Auth
+
+###### PJSIP Endpoint, AOR và Auth
+
 
 ```bash
 [User1]
@@ -224,6 +230,7 @@ allow=opus,ulaw
 ```
 
 ##### WEBRTC SỬ DỤNG SIPML5
+
 ###### Cấu hình Asterisk Dialplan
 
 Cấu hình `/etc/asterisk/extensions.conf`
@@ -235,12 +242,19 @@ exten=>6001,1,Dial(PJSIP/webrtc_client_1,20)
 exten=>6002,1,Dial(PJSIP/webrtc_client_2,20)
 ```
 
+
 ##### Cấu hình SIPML5
 
 Truy cập [SIPML5](https://www.doubango.org/sipml5/) để cấu hình SIPML5 Client
-Click vào "Enjoy our live demo" và cấu hình như sau 
+Click vào "Enjoy our live demo" để cấu hình 
 
 ![image](images/registration_box.png)
+
+
+`Displayname:` Là tên hiển thị khi thực hiện cuộc gọi\
+`Private Identify:` Đây là tên đã được set trong `pjsip.conf`\
+`Public Identify:` Nhập theo format `sip:<Private Identify>@<IP-Address-Asterisk-Server`
+>>>>>>> b685a3c72d91355a9607247c6f466c356c575241
 
 Displayname: Là tên hiển thị khi thực hiện cuộc gọi
 Private Identify: Đây là tên đã được set trong `pjsip.conf`
@@ -256,7 +270,7 @@ Cuối cùng, để có thể login được ta phải truy cập vào  `https:/
 Sau khi hoàn thành bước trên ta có thể click `Login`, nếu xuất hiện `connected`
 là đã login thành công
 
-Để có thể thực hiện một cuộc gọi đơn giản ta cấu hình `extensions.conf` như sau
+Để có thể thực hiện một cuộc gọi đơn giản ta cấu hình `extensions.conf`
 
 ```bash
 [default]
@@ -264,9 +278,11 @@ là đã login thành công
 exten=>6001,1,Dial(PJSIP/User1,20)
 exten=>6002,1,Dial(PJSIP/User2,20)
 ```
-6001, 6002: Là ext để nhập vào thực hiện cuộc gọi
-PJSIP: Thư viện được sử dụng
-User1, User2: Là hai User đã được set trong `pjsip.conf`
+
+`6001, 6002:` Là ext để nhập vào thực hiện cuộc gọi\
+`PJSIP:` Thư viện được sử dụng\
+`User1, User2:` Là hai User đã được set trong `pjsip.conf`
+
 ##### THỰC HIỆN CUỘC GỌI
 Để thực hiện được cuộc gọi ta login thêm một User tương tự ở một trình duyệt web khác
 Trong box Call Control của `User1` ta nhập 6002 sau đó nhấn nút `Call`
