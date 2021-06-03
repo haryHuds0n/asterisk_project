@@ -15,7 +15,7 @@ Dựa vào đó có thể liệt kê các step cho một ứng dụng `WebRTC` n
 2.  Lấy thông tin network như địa chỉ IP, ports và trao đổi thông tin đó với các peer khác (những peer mà mình muốn connect tới) để tạo connection (kết nối) dù cho có bị ngăn cản bởi `NATs` hay `firewalls`. (Các bạn thấy phần 1 giúp ích như thế nào cho phần này rồi chứ?
 3.  Sau đó thì dùng `RTCPeerConnection` và `RTCDataChannel` để voice call/ video call hoặc chia sẻ dữ liệu sau khi đã có kết nối peer-to-peer
 
-![image](images/webRTC.png)
+![image](images/webRTC.jpg)
 
 ##### Web Socket (ws)
 **Websocket** là giao thức hỗ trợ giao tiếp hai chiều giữa client và server để tạo một kết nối trao đổi dữ liệu. Giao thức này không sử dụng HTTP mà thực hiện nó qua TCP. Mặc dù được thiết kế để chuyên sử dụng cho các ứng dụng web, lập trình viên vẫn có thể đưa chúng vào bất kì loại ứng dụng nào.
