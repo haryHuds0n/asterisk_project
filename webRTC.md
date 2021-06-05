@@ -1,4 +1,4 @@
-# Tìm hiểu về giao thức WS, WSS, và WebRTC
+# Tìm hiểu về giao thức TLS WS, WSS, và WebRTC
 
 ## WebRTC
 
@@ -33,9 +33,9 @@ Nhược điểm:
 
 ![image](images/tls-ssl-logo.jpg)
 
-TLS là một công nghệ bảo mật gúp mã hóa liên lạc giữa website và trình duyệt giống như tiền thân của nó là SSL. Nhưng gì SSL đang trở nên lỗi thời và được thay thế hoàn toàn bởi TLS
+TLS là một công nghệ bảo mật gúp mã hóa liên lạc giữa website và trình duyệt giống như tiền thân của nó là SSL. Nhưng SSL đang trở nên lỗi thời nên dần dần được thay thế bởi TLS
 
-TLS là chữ viết tắt của Transport Layer Security và được sử dụng cho giao thức HTTPS (Hypertext Transfer Protocol Secure).
+TLS là viết tắt của Transport Layer Security và được sử dụng cho giao thức HTTPS (Hypertext Transfer Protocol Secure).
 
 Những điều cơ bản của TLS tương tự như với SSL có thể kể đến như là :
 - Bảo mật các thông tin nhạy cảm trong quá trình sử dụng Internet
