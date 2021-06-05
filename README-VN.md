@@ -200,8 +200,6 @@ type=transport
 protocol=wss
 bind=0.0.0.0
 ```
-<<<<<<< HEAD
-###### PJSIP Endpoint, AOR và Auth
 
 ###### PJSIP Endpoint, AOR và Auth
 
@@ -307,4 +305,5 @@ Tới đây là ta đã thực hiện được một cuộc gọi bằng WebRTC 
 Link tham khảo tài liệu:
 
 [Configuring Asterisk for WebRTC Clients - Asterisk Project - Asterisk Project Wiki](https://wiki.asterisk.org/wiki/display/AST/Configuring+Asterisk+for+WebRTC+Clients)
+
 [Stack Overflow - Where Developers Learn, Share, & Build Careers](https://stackoverflow.com/)
