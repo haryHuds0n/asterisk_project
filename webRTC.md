@@ -31,7 +31,7 @@ Nhược điểm:
 
 ##### TLS (Transport Layer Security)
 
-<img src="images/tls-ssl-logo.jpg" width="550" height="200">
+![image](images/tls-sll-logo.jpg)
 
 TLS là một công nghệ bảo mật gúp mã hóa liên lạc giữa website và trình duyệt giống như tiền thân của nó là SSL. Nhưng gì SSL đang trở nên lỗi thời và được thay thế hoàn toàn bởi TLS
 
