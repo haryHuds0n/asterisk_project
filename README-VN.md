@@ -236,8 +236,8 @@ Cấu hình `/etc/asterisk/extensions.conf`
 ```bash
 [default]
 
-exten=>6001,1,Dial(PJSIP/webrtc_client_1,20)
-exten=>6002,1,Dial(PJSIP/webrtc_client_2,20)
+exten=>6001,1,Dial(PJSIP/User1_1,20)
+exten=>6002,1,Dial(PJSIP/User2,20)
 ```
 
 
