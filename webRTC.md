@@ -1,6 +1,6 @@
 # Tìm hiểu về giao thức WS, WSS, và WebRTC
 
-## Webrtc
+## WebRTC
 
 **WebRTC** (Web Real-Time Communication) là một tập hợp các hàm lập trình (web API) được phát triển bởi World Wide Web Consortium (W3C). Khả năng hỗ trợ trình duyệt giao tiếp với nhau theo thời gian thực bằng video, âm thanh hay truyền tải dữ liệu “Peer-to-Peer” (P2P) mà không cần browser phải cài thêm plugins hay phần mềm hỗ trợ nào từ bên ngoài. WebRTC có thể giúp chúng ta gọi điện video ngay trong trình duyệt mà không cần đăng kí tài khoản.
 
@@ -17,7 +17,7 @@ Dựa vào đó có thể liệt kê các step cho một ứng dụng `WebRTC` n
 
 ![image](images/webRTC.jpg)
 
-## Web Socket (ws)
+## Web Socket (WS)
 **Websocket** là giao thức hỗ trợ giao tiếp hai chiều giữa client và server để tạo một kết nối trao đổi dữ liệu. Giao thức này không sử dụng HTTP mà thực hiện nó qua TCP. Mặc dù được thiết kế để chuyên sử dụng cho các ứng dụng web, lập trình viên vẫn có thể đưa chúng vào bất kì loại ứng dụng nào.
 Ưu điểm:
 - Độ trễ thấp và dễ sửa lỗi
