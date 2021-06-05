@@ -1,6 +1,6 @@
-#### Tìm hiểu về giao thức WS, WSS, và WebRTC
+# Tìm hiểu về giao thức WS, WSS, và WebRTC
 
-##### Webrtc là gì?
+## Webrtc
 
 **WebRTC** (Web Real-Time Communication) là một tập hợp các hàm lập trình (web API) được phát triển bởi World Wide Web Consortium (W3C). Khả năng hỗ trợ trình duyệt giao tiếp với nhau theo thời gian thực bằng video, âm thanh hay truyền tải dữ liệu “Peer-to-Peer” (P2P) mà không cần browser phải cài thêm plugins hay phần mềm hỗ trợ nào từ bên ngoài. WebRTC có thể giúp chúng ta gọi điện video ngay trong trình duyệt mà không cần đăng kí tài khoản.
 
@@ -17,7 +17,7 @@ Dựa vào đó có thể liệt kê các step cho một ứng dụng `WebRTC` n
 
 ![image](images/webRTC.jpg)
 
-##### Web Socket (ws)
+## Web Socket (ws)
 **Websocket** là giao thức hỗ trợ giao tiếp hai chiều giữa client và server để tạo một kết nối trao đổi dữ liệu. Giao thức này không sử dụng HTTP mà thực hiện nó qua TCP. Mặc dù được thiết kế để chuyên sử dụng cho các ứng dụng web, lập trình viên vẫn có thể đưa chúng vào bất kì loại ứng dụng nào.
 Ưu điểm:
 - Độ trễ thấp và dễ sửa lỗi
@@ -29,7 +29,7 @@ Nhược điểm:
 - Websocket chưa được hỗ trợ trên tất cả trình duyệt vì chỉ xuất hiện trong HTML5 
 - WebSocket khó sử dụng với các dịch vụ có phạm vi yêu cầu ví dụ như Session in view filter của HIbernate vì WebSocket không có tính năng này.
 
-##### TLS (Transport Layer Security)
+## TLS (Transport Layer Security)
 
 ![image](images/tls-ssl-logo.jpg)
 
@@ -41,7 +41,7 @@ Những điều cơ bản của TLS tương tự như với SSL có thể kể �
 - Bảo mật các thông tin nhạy cảm trong quá trình sử dụng Internet
 - Giải pháp thay thế cho phương pháp truyền thông tin văn bản dạng plain text
 
-##### Cách thức hoạt động của TLS
+### Cách thức hoạt động của TLS
 Có thể hiểu cách thức hoạt động của TLS cơ bản như sau:
 1. Client sẽ gửi yêu cầu đến cho Server, Server sẽ trả lời với bản sao certificate của mình cùng với session ID 
 2. Client sẽ xác thực certificate đó với bên cung cấp là có đáng tin hay không, nếu xác thực thành công client sẽ tham gia vào session
